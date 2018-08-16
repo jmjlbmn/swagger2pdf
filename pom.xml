@@ -77,6 +77,17 @@
                 </configuration>
                 <executions>
                     <execution>
+                        <id>output-html</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>html5</backend>
+                            <outputDirectory>${asciidoctor.html.output.directory}</outputDirectory>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>output-pdf</id>
                         <phase>test</phase>
                         <goals>
